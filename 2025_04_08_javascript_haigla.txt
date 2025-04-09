@@ -1,0 +1,83 @@
+class Patsient{
+    constructor(nimi, vanus){
+        this.nimi = nimi
+        this.vanus = vanus
+    }
+} 
+
+class Arst{
+    constructor(nimi, vanus, eriala, aeg){
+        this.nimi = nimi
+        this.vanus = vanus
+        this.eriala = eriala
+        this.aeg = aeg
+    }
+} 
+
+class Kohtumine{
+    constructor(patsiendiNimi, arstiNimi, aeg){
+        this.patsiendiNimi = patsiendiNimi
+        this.arstiNimi = arstiNimi
+        this.aeg = aeg
+    }
+} 
+   
+class Haigla{
+    constructor(){
+        this.patsientideList = []
+        this.arstideList = []
+        this.kohtumisteList = []
+    }
+    
+    showAllPatsiendid(){
+        for (let i = 0; i < this.patsientideList.length; i++){
+            console.log("Patsiendi nimi: ", this.patsientideList[i].nimi)
+        }
+    }
+    
+    showAllArstid(){
+        for (let i = 0; i < this.arstideList.length; i++){
+            console.log("Arsti nimi: ", this.arstideList[i].nimi)
+        }
+    }
+    
+    showArstiAeg(){
+        let arstiNimi
+        arstiNimi = prompt("Milline arst teid huvitab: ")
+        let patsiendiNimi = prompt("Milline patsient vajab arsti: ")
+        for (let i = 0; i < this.arstideList.length; i++){
+            if (this.arstideList[i].nimi == arstiNimi) {
+                for (let j = 0; j < this.arstideList[i].aeg.length; j++){
+                    console.log(this.arstideList[i].aeg[j])
+                }
+                let arstiAeg = prompt("Milline aeg sobib: ")
+                let kohtumine1 = new Kohtumine(patsiendiNimi, arstiNimi, arstiAeg)
+                this.kohtumisteList.push(kohtumine1)
+            }
+        }
+    }
+    
+    showAllKohtumised(){
+        console.log("Haiglas on järgmised kohtumised: ")
+        for (let i = 0; i < this.kohtumisteList.length; i++){
+            console.log("Patsient: ", this.kohtumisteList[i].patsiendiNimi, "Arst: ", this.kohtumisteList[i].arstiNimi, "Aeg: ", this.kohtumisteList[i].aeg)
+        }
+    }
+}
+
+patsient1 = new Patsient("Thomas", 80)
+patsient2 = new Patsient("Tormi", 18)
+haigla1 = new Haigla()
+haigla1.patsientideList.push(patsient1)
+haigla1.patsientideList.push(patsient2)
+haigla1.showAllPatsiendid()
+arst1 = new Arst("Ahmed", 14, "Kirurg", ["10:00", "11:00", "12:00"])
+arst2 = new Arst("Põssu", 55, "Hambaarst", ["15:00", "11:00", "12:00"])
+haigla1.arstideList.push(arst1)
+haigla1.arstideList.push(arst2)
+haigla1.showAllArstid()
+
+haigla1.showArstiAeg()
+haigla1.showArstiAeg()
+
+haigla1.showAllKohtumised()

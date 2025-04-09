@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iteratiivne/Inkrementaalne</title>
+    <style>
+        table, th, td{
+            border: 1px solid;
+            border-collapse: collapse;
+            margin: 10px 0 10px;
+        }
+        th, td{
+            padding: 5px;
+        }
+        caption{
+            font-weight: bold;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <!-- pealkiri -->
+    <h1>Iteratiivne/Inkrementaalne lähenemine</h1>
+
+    <!-- kirjeldus -->
+    <p>
+        Mis see on:<br>
+        Selle meetodi põhiidee on süsteemi arendamine korduvate tsüklite kaudu (iteratiivne) ja<br>
+        väiksemate osadena korraga (inkrementaalne), võimaldades tarkvaraarendajatel kasutada ära<br>
+        süsteemi varasemate osade või versioonide arendamise käigus õpitut.<br><br>
+
+        Erinevused nende vahel:<br>
+        Inkrementaalne lähenemine jagab tarkvaraarenduse protsessi väikesteks hallatavateks osadeks,<br>
+        mida nimetatakse inkrementideks. Iga juurdekasv tugineb eelmisele versioonile, nii et<br>
+        täiustusi tehakse samm-sammult.<br><br>
+        Iteratiivne mudel tähendab, et tarkvara arendustegevusi korratakse süstemaatiliselt tsüklitena,<br>
+        mida nimetatakse iteratsioonideks. Tarkvara uus versioon toodetakse pärast<br>
+        iga iteratsiooni kuni optimaalse toote saavutamiseni.<br>
+        Iteratiivset ja inkrementaalset mudelit võib kasutada koos, või eraldi.<br><br>
+
+        Kus neid kasutatakse:<br>
+        Inkrementaalne mudel:<br>
+        Suured ja keerukad süsteemid: Kui kogu tarkvara ulatus pole alguses selge,<br>
+        kuid mõned olulised nõuded on hästi kirjeldatud.<br>
+        Kiire turule jõudmise vajadus: Kui piiratud funktsionaalsusega tarkvara tuleb<br>
+        kiiresti turule tuua ja ülejäänud funktsionaalsused lisatakse hiljem.<br>
+        Riskide haldamine: Kõrge riskiga projektides, kus on oluline<br>
+        testida ja valideerida iga inkrementi eraldi.<br>
+        Kliendi kaasamine: Kui klient soovib tarkvara järk-järgult<br>
+        kasutada ja anda tagasisidet iga valminud osa kohta.<br>
+        Uue tehnoloogia rakendamine: Sobib projektidele, kus kasutatakse uut tehnoloogiat ja<br>
+        arendusmeeskond vajab kogemuste omandamist.<br><br>
+
+        Iteratiivne mudel:<br>
+        Kasutajakeskne arendus: Kui on oluline saada regulaarset tagasisidet lõppkasutajalt, et<br>
+        kohandada toodet vastavalt ootustele.<br>
+        Probleemide varajane tuvastamine: Sobib projektidele, kus riskide varajane<br>
+        avastamine ja lahendamine on kriitiline.<br>
+        Muudatuste haldamine: Kui nõuded võivad arenduse käigus muutuda,<br>
+        võimaldab iteratiivne lähenemine neid paremini integreerida.<br>
+        Prototüüpimine: Kasutatakse sageli prototüüpide loomiseks ja nende<br>
+        täiendamiseks vastavalt kliendi tagasisidele.<br><br>
+
+        Kombineeritud kasutus:<br>
+        Mõlemad mudelid sobivad hästi paindlike metoodikate (nt Agile või Scrum) rakendamiseks, kus<br>
+        projektid arenevad järk-järgult ja iteratiivselt. Näiteks:<br>
+        Scrum: Iteratiivne ja inkrementaalne lähenemine aitab hallata projekte, kus nõuded muutuvad kiiresti.<br>
+        Evolutsiooniline arendus: Kasutatakse süsteemides, mida tuleb pidevalt täiendada ja<br>
+        kohandada vastavalt muutuvatele vajadustele.<br>
+    </p>
+
+    <p>
+        <table>
+            <caption>Iteratiivse mudeli head ja halvad</caption>
+            <thead>
+                <tr>
+                    <th>Head</th>
+                    <th>Halvad</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Paindlikkus ja kohanemisvõime: Iteratsioonide käigus saab muuta nõudeid ning kohandada<br>
+                    lahendust vastavalt tagasisidele ja turu muutustele.</td>
+                <td>Ressursimahukus: Iteratsioonide korduv planeerimine, testimine ja<br>
+                    ülevaatus nõuab rohkem aega ja ressursse.</td>
+            </tr>
+            <tr>
+                <td>Varajane probleemide tuvastamine: Iga iteratsiooni lõpus saab testida ja parandada vigu, mis vähendab riske.</td>
+                <td>Ebaselge lõpptulemus: Kuna kõik nõuded ei ole alguses selged, võib lõpptulemus olla raskesti prognoositav.</td>
+            </tr>
+            <tr>
+                <td>Kvaliteedi parandamine: Väikeste osade arendamine ja testimine aitab tagada lõpp-produkti kõrge kvaliteedi.</td>
+                <td>Juhtimise keerukus: Iteratsioonide pidev haldamine ja prioriteetide seadmine võivad olla keerulised.</td>
+            </tr>
+            <tr>
+                <td>Kliendi rahulolu: Regulaarne tagasiside ja kaasamine tagavad, et toode vastab kliendi ootustele.</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Riskijuhtimine: Kõrge riskiga osad saab arendada esmajärjekorras, vähendades hilisemaid probleeme.</td>
+                <td></td>
+            </tr>
+        </table>
+
+        <table>
+            <caption>Inkrementaalse mudeli head ja halvad</caption>
+            <thead>
+                <tr>
+                    <th>Head</th>
+                    <th>Halvad</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Kiirem väärtuse tarnimine: Töötavaid funktsioone saab tarnida varakult ja järk-järgult,<br>
+                    mis võimaldab klientidel neid kohe kasutada.</td>
+                <td>Väiksem sobivus väikestele projektidele: Väikeste süsteemide jagamine<br>
+                    inkrementideks võib olla keeruline või tarbetu.</td>
+            </tr>
+            <tr>
+                <td>Lihtsam haldamine: Projekti jagamine väikesteks osadeks muudab arenduse ülevaatlikumaks ja hallatavamaks.</td>
+                <td>Kõrge alginvesteering: Esialgne süsteemi arhitektuur peab olema piisavalt paindlik, et<br>
+                    toetada tulevasi inkremente, mis võib suurendada kulusid.</td>
+            </tr>
+            <tr>
+                <td>Madal riskitase: Iga inkrement on iseseisev üksus, mida saab eraldi testida ja<br>
+                    valideerida, vähendades projektiriski.</td>
+            <td>Sõltuvused inkrementide vahel: Kui varasemad inkremendid ei ole hästi planeeritud või teostatud,<br>
+                võib see mõjutada järgmiste inkrementide kvaliteeti.</td>
+            </tr>
+            <tr>
+                <td>Muudatuste lihtsam integreerimine: Uued nõuded või muudatused saab lisada järgmiste<br>
+                    inkrementidega ilma kogu projekti ümbertegemiseta.</td>
+                <td></td>
+            </tr>
+        </table>
+
+        Iteratiivne mudel:<br>
+        <img src="Iterative_Process_Diagram.png" alt="y u no see? buy internet"><br>
+
+        Inkrementaalne mudel:<br>
+        <img src="software-engineering-incremental-model.jpg" alt="y u no see? buy internet"><br>
+
+        allikad:
+        <a href="https://en.wikipedia.org/wiki/Iterative_and_incremental_development" target="_blank">Wikipedia</a>
+        <a href="https://www.wrike.com/project-management-guide/faq/what-is-iterative-incremental-development/" target="_blank">Wrike</a>
+        <a href="https://www.perplexity.ai/search/kus-kasutatakse-inkrementaalse-fKCRCEVAQG6Xl1Me2HrqiQ" target="_blank">Perplexity</a>
+        <a href="https://www.tpointtech.com/software-engineering-incremental-model#:~:text=Incremental%20Model%20is%20a%20process,design%2C%20implementation%20and%20testing%20phases." target="_blank">pointTech</a>
+     </p>
+</body>
+</html>
