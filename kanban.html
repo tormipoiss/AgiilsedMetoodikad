@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban</title>
+
+    <style>
+        table, th, td{
+            border: 1px solid;
+            border-collapse: collapse;
+            margin: 10px 0 10px;
+        }
+        th, td{
+            padding: 5px;
+        }
+        caption{
+            font-weight: bold;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kanban</h1>
+    
+    <p>
+        Kanban is an Agile management method built on a philosophy of continuous<br>
+        improvement, where work items are “pulled” from a product backlog into a steady<br>
+        flow of work. The framework is applied using Kanban boards, a form of visual<br>
+        project management. In a Kanban board, tasks—represented as cards—move through<br>
+        stages of work—represented as columns. That way, your team can see where work is<br>
+        in real-time.<br><br>
+
+        Kanban is especially popular with product, engineering, and software development<br>
+        teams. But any team that wants to create a more dynamic, flexible workflow can<br>
+        use them.<br><br>
+
+        <b>History of Kanban</b><br>
+        Taiichi Ohno, a Toyota engineer from Japan, created Kanban in the late 1940s.<br>
+        Ohno realized he could improve the Toyota Production System by incorporating<br>
+        elements of lean manufacturing: Instead of building new products based on<br>
+        anticipated demand, Ohno’s Kanban framework—also referred to as the “Just-in-Time”<br>
+        (JIT) system—produced and re-supplied products as a result of consumer demand.<br>
+        The new framework transitioned the Toyota manufacturing process from a “push”<br>
+        process (products are pushed into the market) to a “pull” process (products are<br>
+        created based on market demand). This meant that Toyota could have a lower<br>
+        inventory level while still being a competitive player in the market.<br><br>
+
+        “Kanban” is a combination of two Japanese words: 看 (Kàn), meaning “sign,” and<br>
+        板 (Bǎn), meaning “board.”<br><br>
+
+        Though Kanban still lives on in many manufacturing settings, it was adapted for<br>
+        software development in the early 2000s. Kanban for software development uses the<br>
+        same "pull system" process that Ohno's lean manufacturing did.<br><br>
+
+        Software development teams have found Kanban highly complementary to their DevOps<br>
+        practices. The synergy between Kanban and DevOps accelerates delivery times and<br>
+        promotes a culture of continuous improvement and operational efficiency.<br><br>
+
+        <b>What are Kanban boards?</b><br>
+        Kanban teams use a visualization tool called Kanban boards to manage their<br>
+        workload and flow.<br>
+        In a Kanban board, work is displayed on a project board that is organized by<br>
+        columns. Traditionally, each column represents a stage of work. The most basic<br>
+        Kanban board might have columns like “To do,” “In progress,” and “Done.” Each<br>
+        column is filled with visual cards that represent individual tasks. A team moves<br>
+        through the columns until the tasks are completed.<br><br>
+
+        Picture it like the shelves in a supermarket. As product inventory diminishes<br>
+        because it’s bought by consumers, staff refills the shelves with new products.<br>
+        The shelves are never empty, but the product is constantly replaced with new<br>
+        items—a Kanban board is continuously filled with new tasks as your team completes<br>
+        old ones.<br><br>
+
+        Now, you can have a physical Kanban board hanging in a conference room or you can<br>
+        streamline processes online—a much easier solution for remote or virtual teams.<br><br>
+
+        <img src="kanbanboards.webp" width="800px" alt="Kanban board example"><br><br>
+
+        <b>What are Kanban cards?</b><br>
+        Kanban cards are the driving force behind the Kanban system, with each card<br>
+        representing an individual task or work item, providing a clear and concise<br>
+        overview of the task at hand.<br><br>
+
+        Kanban cards typically include essential details such as the task title,<br>
+        description, due date, key stakeholders, and the person responsible for it, or<br>
+        rather, the product owner. Colors are often assigned to different types of work,<br>
+        so team members can quickly grasp the task's requirements and status.<br><br>
+
+        <b>How does Kanban work?</b><br>
+        Kanban boards visualize a team's work by assigning individual tasks to Kanban<br>
+        cards or sticky notes, which are organized in columns on a whiteboard. These<br>
+        columns, known as swimlanes, reflect the value stream—a series of specified<br>
+        stages that tasks or products must complete from beginning to end. Tasks, or<br>
+        cards, are then placed into their appropriate swimlanes, which effectively maps<br>
+        out the workflow.<br><br>
+
+        As work progresses, team members remove cards and move them from left to right.<br>
+        Some swimlanes have a capacity limit, also referred to as a WIP limit (work in<br>
+        progress), to ensure the Kanban system runs smoothly.<br><br>
+
+        <b>4 core principles of Kanban</b><br>
+        There are four core principles to help guide your team as you<br>
+        think about rolling out a Kanban framework:<br><br>
+
+        <img src="kanbanprinciples.webp" width="800px" alt="Kanban principles"><br><br>
+
+        <ol>
+        <li>        <b>Start with what you do now</b><br>
+                You can apply Kanban to any current workflow or process. Unlike more defined<br>
+                Agile management processes like Scrum, Kanban is flexible enough to work within<br>
+                your team’s core practices.<br><br></li>
+            <li>        <b>Agree to pursue incremental, evolutionary change</b><br>
+                Big changes can be disruptive to your team, and if you try to change everything<br>
+                at once, your new system may not work. Kanban knows this, which is why the Kanban<br>
+                framework focuses on continuous improvement and incremental change. Instead of<br>
+                changing everything all at once, start by pursuing incremental change in order to<br>
+                truly evolve your team’s processes over time.<br><br></li>
+            <li>        <b>Respect the current process, roles, and responsibilities</b><br>
+                Unlike other lean methodologies, Kanban doesn’t have any built-in team roles, so it<br>
+                works within your current team structure and process. Additionally, your current<br>
+                process may have some great elements that would be lost if you attempted to<br>
+                completely revamp your working system in one day.<br><br></li>
+            <li>        <b>Encourage acts of leadership at all levels</b><br>
+                In the spirit of continuous improvement, the Kanban method recognizes that change<br>
+                can come from anywhere—not necessarily just “top-down.” With Kanban, team members<br>
+                are encouraged to chime in, brainstorm new ways for processes to evolve, and take<br>
+                the lead on new work initiatives.<br><br></li>
+        </ol>
+
+        <b>Essential Kanban best practices</b><br>
+        The Kanban core principles help guide your team’s mentality when you approach the<br>
+        Kanban workflow. To implement a Kanban process, follow these six practices to help<br>
+        your team continuously improve and achieve incremental growth—the core tenets of<br>
+        the Kanban framework.<br><br>
+
+        <img src="kanbanpractices.webp" width="800px" alt="Kanban best practices"><br><br>
+
+        <ol>
+            <li>        <b>Visualize work</b><br>
+                One of the biggest advantages of Kanban is the functionality of seeing work “move”<br>
+                through stages. Not only does this practice give you a broad sense of how work<br>
+                moves through stages, but you can also get real-time, at-a-glance insight into the<br>
+                stage of work.<br><br></li>
+            <li>        <b>Limit work in progress</b><br>
+                Work In Progress Limits, or WIP limits, are the maximum number of cards that can be<br>
+                displayed in a single column at any given moment.<br><br>
+            
+                As an Agile methodology, Kanban is built on the principle of early delivery, which<br>
+                means tasks should move quickly between columns instead of languishing with an<br>
+                ambiguous “in progress” status.<br><br>
+
+                There’s no set requirement for how many tasks should be “in progress” at any given<br>
+                time, but in general, WIP limits can encourage your team to reduce multitasking and<br>
+                focus on the production of individual work.<br><br>
+            </li>
+            <li>        <b>Manage flow</b><br>
+                If you want to limit work in progress, the best way to do that is to optimize the<br>
+                flow of tasks within your Kanban board. Managing and improving your flow will<br>
+                decrease your lead time (the amount of time spent between starting on a task and<br>
+                moving it to the “Done” column on your Kanban board), reduce bottlenecks, and<br>
+                ensure you’re delivering tasks or shipping new products while they’re still relevant.<br><br></li>
+            <li>        <b>Make process policies explicit</b><br>
+                Because tasks move so quickly in Kanban, make sure your team has established and<br>
+                clearly communicated conventions. Your process policies should guide how your team<br>
+                implements the Kanban methodology.<br><br>
+        
+                Additionally, everyone on your team should be encouraged to participate and<br>
+                innovate on your Kanban policy, in accordance with the fourth Kanban core<br>
+                principle: Encourage acts of leadership at all levels.<br><br></li>
+            <li>        <b>Implement feedback loops</b><br>
+                In Kanban, you want to gather feedback from two distinct groups: your customers and<br>
+                your team.<br><br>
+        
+                Customers: Gather feedback and user stories from customers on the quality and<br>
+                effectiveness of the solution your team produced. Was it the right thing to<br>
+                produce? Were there any problems? If there were problems (like bugs in code or<br>
+                defects in a product), revisit your Kanban flow and add more time for review,<br>
+                vetting, and evaluation.<br><br>
+        
+                Team: Check in frequently with your team on the process of running a Kanban<br>
+                framework itself. How do they feel about their output? Here you have another<br>
+                opportunity to encourage acts of leadership at all levels and improve your team’s<br>
+                process policies.<br><br>
+        
+                Feedback is an integral part of continuous improvement and, therefore, the Kanban<br>
+                framework.<br><br></li>
+            <li>        <b>Use key metrics to improve continuously</b><br>
+                Tracking key performance metrics like lead time, cycle time, and throughput is<br>
+                essential for effectively implementing a Kanban system. The metrics provide<br>
+                valuable insights into the team's progress and efficiency, highlighting areas that<br>
+                could be improved.<br><br>
+        
+                Teams can use this data analysis to make informed decisions and continuously refine<br>
+                their Kanban process, ensuring that workflows are optimized for maximum<br>
+                productivity and minimal waste. Enhancing project visibility drives the team<br>
+                towards achieving operational excellence in an Agile environment.<br><br></li>
+                <li>
+
+                    <b>Improve collaboratively and evolve experimentally</b><br>
+                    Kanban, at its core, is about continuous improvement. But this also means other<br>
+                    systems might work well in conjunction with Kanban. Whether it’s Scrum or<br>
+                    something else, always be willing to collaborate, experiment, and evolve your<br>
+                    processes if necessary.<br><br>
+                </li>
+        </ol>
+
+        <b>Kanban boards: Pros and cons</b><br>
+        So now that you know how Kanban works,<br>
+        only one question remains: Should your team use Kanban? There’s no<br>
+        right or wrong answer—but here are some benefits and some downsides<br>
+        your team may experience with the Kanban framework.<br><br>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Benefits of Kanban</th>
+                    <th>Disadvantages of Kanban</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>        <b>Provides an at-a-glance insight into your team's work:</b><br> As a form of visual
+                    project management, Kanban can help you bring tasks to life and gain<br>
+                    clear insight into your team’s workflows.<br><br></td>
+                <td>        <b>It’s not as common among non-engineering teams:</b><br> Like Scrum, Agile, and
+                    other lean methodologies, Kanban isn’t as well known among non-<br>
+                    engineering teams. Kanban can be an effective tool for all sorts of<br>
+                    teams. But if you’re planning to introduce a Kanban process to a non-<br>
+                    engineering team, consider moving one workstream into Kanban at a time<br>
+                    to help your team with the adoption process.<br></td>
+            </tr>
+            <tr>
+                <td>        <b>Increased clarity, especially for remote teams:</b><br> If your team is working
+                    remotely, it can be difficult to gain visibility into what everyone is<br>
+                    working on. By centralizing work and reducing the amount of work in<br>
+                    flight at any given time, Kanban boards can help you and your team<br>
+                    gain instant insight into who’s working on what.<br></td>
+                <td>        <b>It can quickly become overwhelming:</b><br> Because each task card takes up so
+                    much visual space, your Kanban board can quickly get cluttered and<br>
+                    overwhelmed if you have too many things in flight at once.<br><br></td>
+            </tr>
+            <tr>
+                <td>        <b>Encourages flexibility:</b><br> Because the Kanban framework is built on a<br>
+                    process of continuous improvement, teams that implement Kanban can<br>
+                    become more flexible and dynamic over time. If you follow the four<br>
+                    core principles and the six key practices, your team can become more<br>
+                    agile and open to change.<br></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>        <b>Improves efficiency:</b><br> By increasing efficiency and reducing waste,<br>
+                    Kanban can also contribute to more accurate pricing and cost<br>
+                    management for projects.<br></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <b>What is a Definition of Done</b><br>
+Kanban is a Lean thinking methodology. And as such, it has an instructive<br>
+relationship with the Definition of Done. Additionally, one of the main goals of<br>
+Kanban (and Lean) is optimization of the value stream. But in order to optimize it,<br>
+first, you must understand how the work flows through it.<br><br>
+
+So first, you need to take a Kanban board where process stages are represented as<br>
+columns. Meaning, you need to break the process down into multiple stages that can<br>
+be analyzed for bottlenecks and the occurrence of waste. The work items are<br>
+represented as Kanban cards. Distributed across corresponding columns. As the<br>
+actual work items move through the flow, so do the cards. Flowing from one column<br>
+to the next. But they have to fulfill specific criteria before they can be moved.<br><br>
+
+These conditional criteria are known as ‘Definition of Done’. And they are the<br>
+standard against which all tasks are put against to determine whether a task is<br>
+complete or ‘done’. The definition of done can be defined as agreed-upon evidence<br>
+of what means to complete a task, process, or milestone.<br><br>
+
+Let’s look at an example. If I have a card called “Blog topics”, I can notice that<br>
+it doesn’t have a clear definition of done. So if I start generating topics, when<br>
+will I finish? How many topics do I need to generate? 5? 10? 30? There’s no clear<br>
+goal, no finish line if you will. But if the card is called “15 Blog topic ideas”,<br>
+and even an additional description specifying what the blog posts should address,<br>
+it’s a whole different story. I have a clear task ahead of me. It’s clear and<br>
+precise. The value of adding new topics is clear (creating relevant content and<br>
+strengthening the website). And it’s short enough to do it quickly and doesn’t<br>
+need to be broken down into smaller tasks.<br><br>
+
+<img src="DoD.png" width="800px" alt="Definition of Done"><br><br>
+
+<b>Purpose of Definition of Done</b><br>
+If we take a step back, and look at the fact that Kanban is a Lean methodology, the<br>
+definition of done may seem like a waste. Adding a definition of done between steps<br>
+would prolong the production. So it’s no wonder you might think it’s choking the<br>
+process. But in reality, the inspection of completed work is validating its quality<br>
+and ensuring you deliver value.<br><br>
+
+But the definition of done should be applied even when you are creating new tasks.<br>
+First, think about the purpose of a task and how it fits in the big picture. Then,<br>
+make sure it has a meaningful definition of done. And lastly and most importantly,<br>
+check if the task brings value. If it doesn’t, don’t add it to the board because it will<br>
+only waste your time and resources.<br><br>
+
+This is very important because Kanban’s goal is to improve flow and ensure better<br>
+use of resources. Therefore, all work must be meaningful and contribute to the value<br>
+of the process. If there are tasks that are not bringing value either to the<br>
+customer or to the organization, you should eliminate them from the process.<br><br>
+
+<b>Writing Your Definition of Done</b><br>
+Now that we have established that all of your Kanban cards should relay a task that<br>
+brings value, let’s go over how to create a meaningful definition of done. Even if<br>
+you have an idea about the definition of done for a task, you need to make sure it<br>
+addresses every aspect of the task. The best way to write good definitions of done<br>
+is to get together with the whole team and go over all work that flows through the<br>
+board. Discuss what each task entails, and what it means for same or very similar<br>
+tasks to be done. Then, define the definition of done for different types of work in<br>
+written form. Make sure you create a separate definition of done for each column and<br>
+lane if necessary.<br><br>
+
+One way to do this is to write a concise description of what it means to complete<br>
+the work. Another is to create a checklist you can go through before moving a card<br>
+to the next column or the ‘done’ column. Depending on the nature of your work, you<br>
+can use shorter or longer descriptions, simple or lengthy requirements’ checklists.<br>
+It’s up to you what form you’ll use, as long as every team member understands it.<br>
+There isn’t a prescribed format for a definition of done though. You can write it in<br>
+the format that best suits your team. And makes using it fast and simple.<br><br>
+
+        Sources:<br>
+        <a href="https://www.perplexity.ai/search/please-cut-the-lines-of-text-i-Z9pX4CCKQcWL9RMxIefEDg" target="_blank">Perplexity</a><br>
+        <a href="https://asana.com/resources/what-is-kanban" target="_blank">Asana</a><br>
+        <a href="https://kanbanzone.com/2019/definition-of-done-kanban-board/" target="_blank">Kanban Zone</a><br>
+        <a href="https://www.atlassian.com/agile/project-management/definition-of-done" target="_blank">Atlassian</a><br>
+    </p>
+</body>
+</html>
