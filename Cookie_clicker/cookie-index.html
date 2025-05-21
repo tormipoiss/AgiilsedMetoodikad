@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        #game-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        #cookie {
+            width: 200px;
+            height: 200px;
+            cursor: pointer;
+            transition: transform 0.1s;
+        }
+        #cookie:active {
+            transform: scale(0.95);
+        }
+        #score-display {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+        #upgrades {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .upgrade-btn {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .upgrade-btn:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #change-cookie {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="game-container">
+        <h1>Cookie Clicker</h1>
+        <div id="score-display">
+            <p>Score: <span id="score">0</span></p>
+            <p>Click Value: <span id="click-value">1</span></p>
+        </div>
+        
+        <img id="cookie" src="" alt="Cookie">
+        
+        <div id="upgrades">
+            <button id="upgrade1" class="upgrade-btn">Upgrade Click (+1) - Cost: 10</button>
+            <button id="upgrade2" class="upgrade-btn">Upgrade Click (+5) - Cost: 50</button>
+            <button id="upgrade3" class="upgrade-btn">Upgrade Click (+10) - Cost: 100</button>
+        </div>
+        
+        <button id="change-cookie" onclick="window.location.href='cookie-selector.html'">Change Cookie</button>
+    </div>
+
+    <script>
+        // Game variables
+        let score = 0;
+        let clickValue = 1;
+        
+        // DOM elements
+        const scoreElement = document.getElementById('score');
+        const clickValueElement = document.getElementById('click-value');
+        const cookieElement = document.getElementById('cookie');
+        const upgrade1Button = document.getElementById('upgrade1');
+        const upgrade2Button = document.getElementById('upgrade2');
+        const upgrade3Button = document.getElementById('upgrade3');
+        
+        // Load selected cookie or use default
+        function loadSelectedCookie() {
+            const selectedCookie = localStorage.getItem('selectedCookie') || 'cookie1.png';
+            cookieElement.src = selectedCookie;
+        }
+        
+        // Update score display
+        function updateScore() {
+            scoreElement.textContent = score;
+            clickValueElement.textContent = clickValue;
+            
+            // Check if upgrades are affordable
+            upgrade1Button.disabled = score < 10;
+            upgrade2Button.disabled = score < 50;
+            upgrade3Button.disabled = score < 100;
+        }
+        
+        // Cookie click handler
+        cookieElement.addEventListener('click', () => {
+            score += clickValue;
+            updateScore();
+        });
+        
+        // Upgrade handlers
+        upgrade1Button.addEventListener('click', () => {
+            if (score >= 10) {
+                score -= 10;
+                clickValue += 1;
+                updateScore();
+            }
+        });
+        
+        upgrade2Button.addEventListener('click', () => {
+            if (score >= 50) {
+                score -= 50;
+                clickValue += 5;
+                updateScore();
+            }
+        });
+        
+        upgrade3Button.addEventListener('click', () => {
+            if (score >= 100) {
+                score -= 100;
+                clickValue += 10;
+                updateScore();
+            }
+        });
+        
+        // Initialize game
+        loadSelectedCookie();
+        updateScore();
+    </script>
+</body>
+</html>
